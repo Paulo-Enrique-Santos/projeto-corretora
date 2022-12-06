@@ -1,0 +1,27 @@
+// VARIÁVEIS
+
+:root {
+    --background-color: #000;
+    --destak-color: #00A9E0;
+    
+    --title-color: #fff;
+    --legend-color: #666666;
+    --positive-color: #00A82F;
+    --negative-color: #DD0000;
+
+    --extraBold-font: 1000;
+    --bold-font: 600;
+    --regular-font: 300;
+
+    --titleSize-font: 32px;
+    --subtitleSize-font: 24px;
+    --legendSize-font: 14px;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --titleSize-font: 26px;
+        --subtitleSize-font: 18px;
+        --legendSize-font: 12px
+    }
+}
