@@ -1,0 +1,104 @@
+.header {
+    &-background {
+        background-color: var(--background-color);
+        width: 100vw;
+        height: 70px;
+        overflow-x: clip;
+        position: relative;
+    }
+
+    &-navbar {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        align-items: center;
+
+        &-menu {
+            flex-grow: 1;
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            font-size: var(--menuSize-font);
+            padding: 0 40px;
+            color: var(--title-color);
+    
+            li {
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: .2s;
+            }
+    
+            li:hover:after {
+                width: 50%;
+            }
+    
+            li:after {
+                content: "";
+                display: block;
+                width: 0%;
+                height: 1px;
+                background-color: var(--destak-color);
+                transition: .2s;
+            }
+    
+            .active-section::after {
+                content: "";
+                display: block;
+                width: 50%;
+                height: 1px;
+                background-color: var(--destak-color);
+                transition: .2s;
+            }
+        }
+    
+        &-buttons {
+            display: flex;
+            gap: 10px;
+        }    
+    }
+
+    &-hamburguer {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        &-hamburguer {
+            display: block;
+        }
+
+        &-navbar {
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: -100vw;
+            width: 100vw;
+            height: calc(100vh - 70px);
+            padding-bottom: 20px;
+            background-color: var(--background-color);
+            transition: .5s;
+
+            &-menu {
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            &-buttons {
+                flex-direction: column;
+                width: 90%;
+            }
+        }
+
+        &-active {
+            .header {
+                &-navbar {
+                    right: 0;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+}

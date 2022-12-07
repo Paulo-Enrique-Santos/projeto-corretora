@@ -1,0 +1,35 @@
+button {
+    border-radius: 10px;
+    font-weight: var(--extraBold-font);
+    padding: 10px 25px;
+    font-size: var(--menuSize-font);
+    cursor: pointer;
+    transition: .2s;
+    border: none;
+}
+
+.button-first {
+    background-color: var(--destak-color);
+    color: var(--title-color);
+}
+
+.button-first:hover {
+    background-color: var(--destak-hover-color);
+    transition: .2s;
+}
+
+.button-reverse {
+    background-color: var(--title-color);
+    color: var(--destak-color);
+}
+
+.button-reverse:hover {
+    background-color: var(--title-hover-color);
+    transition: .2s;
+}
+
+.button-outline {
+    background-color: transparent;
+    color: var(--destak-color);
+    border: 2px solid var(--destak-color);
+}

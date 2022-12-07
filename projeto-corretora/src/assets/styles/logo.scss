@@ -1,0 +1,33 @@
+.box-logo {
+    display: flex;
+    width: 130px;
+    height: 50px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--destak-color);
+
+    h1 {
+        letter-spacing: 0.15em;
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: var(--extraBold-font);
+    }
+
+    h1::after {
+        content: "";
+        width: 80%;
+        height: 1px;
+        display: block;
+        background-color: var(--titleSecondary-color);
+        margin-top: -5%;
+    }
+
+    h2 {
+        font-size: 10px;
+        font-weight: var(--bold-font);
+    }
+}

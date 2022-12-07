@@ -1,7 +1,15 @@
-@import './assets/styles/variables.scss';
+@import './assets/styles/index.scss';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;900;1000&display=swap');
+
+$hamburger-layer-color: var(--title-color);
+$hamburger-layer-width: 35px;
+$hamburger-hover-opacity: 1;
+
+@import '../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
 }

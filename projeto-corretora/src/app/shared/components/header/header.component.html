@@ -1,0 +1,25 @@
+<header class="header-background" [ngClass]="{'header-active' : isOpenSidebar}">
+    <div class="container">
+        <div class="box-logo">
+            <h1>genial</h1>
+            <h2>investimentos</h2>
+        </div>
+        <button class="hamburger hamburger--slider-r header-hamburguer" [ngClass]="{'is-active' : isOpenSidebar}"
+            type="button" (click)="toggleSidebar()">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <div class="header-navbar">
+            <ul class="header-navbar-menu">
+                <li>Home</li>
+                <li>Ativo</li>
+                <li>Saiba Mais</li>
+            </ul>
+            <div class="header-navbar-buttons">
+                <button class="button-first">Abra sua Conta</button>
+                <button class="button-reverse">Entre</button>
+            </div>
+        </div>
+    </div>
+</header>

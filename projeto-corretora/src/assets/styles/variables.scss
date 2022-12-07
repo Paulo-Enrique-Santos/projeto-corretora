@@ -1,20 +1,24 @@
 // VARIÁVEIS
 
 :root {
-    --background-color: #000;
+    --background-color: #161b22;
     --destak-color: #00A9E0;
+    --destak-hover-color: #0092c3;
     
     --title-color: #fff;
+    --title-hover-color: #e4e4e4;
+    --titleSecondary-color: #c9d1d9;
     --legend-color: #666666;
     --positive-color: #00A82F;
     --negative-color: #DD0000;
 
-    --extraBold-font: 1000;
-    --bold-font: 600;
+    --extraBold-font: 700;
+    --bold-font: 500;
     --regular-font: 300;
 
     --titleSize-font: 32px;
     --subtitleSize-font: 24px;
+    --menuSize-font: 16px;
     --legendSize-font: 14px;
 }
 
