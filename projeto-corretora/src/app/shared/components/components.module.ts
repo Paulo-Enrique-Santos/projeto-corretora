@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from '@components/header';
+import { FooterComponent } from '@components/footer';
 
 const components = [
-  HeaderComponent
+  HeaderComponent,
+  FooterComponent
 ];
 
 @NgModule({
