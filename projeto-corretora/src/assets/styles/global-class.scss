@@ -6,4 +6,36 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.section {
+    width: 100vw;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-flow: column;
+}
+
+.title {
+    color: var(--color-contrast-scale-1);
+    font-size: var(--font-size-big);
+    font-weight: var(--font-weight-bold);
+}
+
+.subtitle {
+    color: var(--color-contrast-scale-1);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+}
+
+.paragraph {
+    color: var(--color-contrast-scale-2);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-light);
+}
+
+.legend {
+    color: var(--color-contrast-scale-4);
+    font-size: var(--font-size-extra-small);
+    font-weight: var(--font-weight-light);
 }

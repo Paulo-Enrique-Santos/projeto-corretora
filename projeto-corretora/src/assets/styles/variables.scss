@@ -1,31 +1,36 @@
 // VARIÁVEIS
 
 :root {
-    --background-color: #161b22;
-    --destak-color: #00A9E0;
-    --destak-hover-color: #0092c3;
+    --color-background-scale-1: #0d1117;
+    --color-background-scale-2: #161b22;
+
+    --color-destak-scale-1: #00A9E0;
+    --color-destak-scale-2: #0092c3;
     
-    --title-color: #fff;
-    --title-hover-color: #e4e4e4;
-    --titleSecondary-color: #c9d1d9;
-    --legend-color: #666666;
-    --positive-color: #00A82F;
-    --negative-color: #DD0000;
+    --color-contrast-scale-1: #fff;
+    --color-contrast-scale-2: #e4e4e4;
+    --color-contrast-scale-3: #C5C5C5;
+    --color-contrast-scale-4: #a6a6a6;
+    --color-contrast-scale-5: #666666;
 
-    --extraBold-font: 700;
-    --bold-font: 500;
-    --regular-font: 300;
+    --color-positive-scale-1: #00A82F; 
 
-    --titleSize-font: 32px;
-    --subtitleSize-font: 24px;
-    --menuSize-font: 16px;
-    --legendSize-font: 14px;
+    --color-negative-scale-1: #DD0000;
+
+    --font-weight-bold: 700;
+    --font-weight-regular: 500;
+    --font-weight-light: 300;
+
+    --font-size-big: 32px;
+    --font-size-medium: 24px;
+    --font-size-small: 16px;
+    --font-size-extra-small: 14px;
 }
 
 @media (max-width: 768px) {
     :root {
-        --titleSize-font: 26px;
-        --subtitleSize-font: 18px;
-        --legendSize-font: 12px
+        --font-size-big: 26px;
+        --font-size-medium: 18px;
+        --font-size-extra-small: 12px
     }
 }

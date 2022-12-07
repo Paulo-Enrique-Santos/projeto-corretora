@@ -1,6 +1,6 @@
 .header {
     &-background {
-        background-color: var(--background-color);
+        background-color: var(--color-background-scale-1);
         width: 100vw;
         height: 70px;
         overflow-x: clip;
@@ -12,15 +12,15 @@
         justify-content: space-between;
         flex-grow: 1;
         align-items: center;
+        color: var(--color-contrast-scale-1);
 
         &-menu {
             flex-grow: 1;
             list-style: none;
             display: flex;
             gap: 40px;
-            font-size: var(--menuSize-font);
+            font-size: var(--font-size-small);
             padding: 0 40px;
-            color: var(--title-color);
     
             li {
                 cursor: pointer;
@@ -39,7 +39,7 @@
                 display: block;
                 width: 0%;
                 height: 1px;
-                background-color: var(--destak-color);
+                background-color: var(--color-destak-scale-1);
                 transition: .2s;
             }
     
@@ -48,7 +48,7 @@
                 display: block;
                 width: 50%;
                 height: 1px;
-                background-color: var(--destak-color);
+                background-color: var(--color-destak-scale-1);
                 transition: .2s;
             }
         }
@@ -78,7 +78,7 @@
             width: 100vw;
             height: calc(100vh - 70px);
             padding-bottom: 20px;
-            background-color: var(--background-color);
+            background-color: var(--color-background-scale-1);
             transition: .5s;
 
             &-menu {
