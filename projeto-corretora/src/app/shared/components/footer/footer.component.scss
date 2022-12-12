@@ -1,6 +1,6 @@
 .footer {
     &-background {
-        width: 100vw;
+        max-width: 100vw;
         background-color: var(--color-background-scale-1);
         padding: 20px 0;
         border-top: 2px solid var(--color-contrast-scale-3);

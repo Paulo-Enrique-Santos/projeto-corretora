@@ -1,0 +1,16 @@
+.entry-bottom-to-top {
+    opacity: 0;
+    animation: entry-bottom-to-top 2s forwards ease-out;
+}
+
+@keyframes entry-bottom-to-top {
+    0% { 
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}

@@ -1,11 +1,51 @@
 .home {
-    background: 
-        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-        url('../../../assets/images/backgrounds/background-home.jpg');
+    background: var(--color-background-scale-1);
     background-position: center;
     background-size: cover;
+    position: relative;
+
+    .container {
+        align-items: center;
+    }
+    
+    &-background {
+        position: absolute;
+
+
+        &-svgs {
+            position: relative;
+            display: flex;
+            max-width: 100vw;
+
+            #logo {
+                position: absolute;
+                
+                max-width: 100vw;
+
+                path {
+                    fill: red;
+                }
+
+                #Diamond {
+                    fill: black;
+                }
+            }
+        }
+    }
+
+    &-background::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        background: linear-gradient(110deg, #000 5%, transparent 50%, #000 95%);
+    }
 
     &-box {
+        
         width: 50%;
         padding-bottom: 30px;
 
@@ -13,10 +53,81 @@
             padding-top: 15px;
             padding-bottom: 30px;
             color: var(--color-contrast-scale-3);
+            animation-delay: .3s;
         }
 
         .button-primary {
             padding: 12px 40px;
+            animation-delay: .6s;
+        }
+
+        &-bitcoin {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            position: relative;
+
+            &-mask {
+                background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            #bitcoin {
+                height: 300px;
+            }
+
+            #border {
+                fill-opacity: 1;
+                stroke: #101010;
+
+                stroke-dasharray: 700 200;
+
+            }
+        }
+    }
+}
+
+.demo-account {
+    background-color: var(--color-background-scale-1);
+
+    .container {
+        height: 100%;
+        align-items: center;
+    }
+
+    &-box {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+
+        .subtitle {
+            animation-delay: .3s;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        background-position: right;
+
+        &-box {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .home {
+        &-box {
+            .button-primary {
+                width: 100%;
+            }
         }
     }
 }
