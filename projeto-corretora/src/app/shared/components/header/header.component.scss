@@ -1,11 +1,12 @@
 .header {
     &-background {
         background-color: var(--color-background-scale-1);
-        width: 100vw;
         height: 70px;
         overflow-x: clip;
         position: fixed;
         top: 0;
+        right: 0;
+        left: 0;
         z-index: 99;
 
         .container {
@@ -82,7 +83,7 @@
             position: absolute;
             top: 70px;
             right: -100vw;
-            width: 100vw;
+            width: 100%;
             height: calc(100vh - 70px);
             padding-bottom: 20px;
             background-color: var(--color-background-scale-1);

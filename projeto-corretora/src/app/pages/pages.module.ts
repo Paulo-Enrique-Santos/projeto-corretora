@@ -4,9 +4,11 @@ import { CommonModule } from '@angular/common';
 
 import { HomeComponent } from '@pages/home';
 import { MaterialModule } from '@shared/material';
+import { CollectionDetailsComponent } from '@pages/collection-details';
 
 const components = [
-  HomeComponent
+  HomeComponent,
+  CollectionDetailsComponent
 ];
 
 @NgModule({
