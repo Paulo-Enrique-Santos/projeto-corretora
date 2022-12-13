@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HomeComponent } from '@pages/home';
+import { MaterialModule } from '@shared/material';
 
 const components = [
   HomeComponent
@@ -11,7 +12,8 @@ const components = [
 @NgModule({
   declarations: [...components],
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule
   ],
   exports: [...components]
 })

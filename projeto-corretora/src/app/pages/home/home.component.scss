@@ -3,6 +3,7 @@
     background-position: center;
     background-size: cover;
     position: relative;
+    margin-top: 70px;
 
     .container {
         align-items: center;
@@ -90,13 +91,8 @@
     }
 }
 
-.demo-account {
+.active {
     background-color: var(--color-background-scale-1);
-
-    .container {
-        height: 100%;
-        align-items: center;
-    }
 
     &-box {
         display: flex;
@@ -107,6 +103,137 @@
 
         .subtitle {
             animation-delay: .3s;
+        }
+    }
+}
+
+.section-cards {
+    background-color: var(--color-background-scale-1);
+
+    &-box {
+        width: 100%;
+        display: flex;
+        padding: 40px 0;
+
+        &.reverse {
+            flex-direction: row-reverse;
+        }
+
+
+        .legend {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 30px;
+            gap: 20px;
+        }
+
+        .image {
+            width: 50%;
+            height: 100%;
+            background-color: aqua;
+        }
+    }
+}
+
+.nft {
+    background-color: var(--color-background-scale-1);
+    
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    h1 {
+        span {
+            color: var(--color-destak-scale-1);
+        }
+    }
+
+    &-box {
+        width: 100%;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        padding: 30px 0 50px;
+    }
+
+    &-card {
+        width: 200px;
+        background-color: red;
+        transform: translate(0);
+        overflow: hidden;
+        text-align: start;
+        padding: 5px 10px 10px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -24px;
+            left: -64px;
+            width: 150%;
+            height: 70%;
+            transform: rotate(-12deg);
+            z-index: -1;
+            background: linear-gradient(170deg, #D97904, #F2B705);
+        }
+
+        .legend {
+            width: 100%;
+            text-align: end;
+        }
+
+        .subtitle {
+            width: 100%;
+            text-align: end;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            padding: 0;
+            margin-top: 20px;
+            background-color: transparent;
+
+            span {
+                overflow: hidden;
+                text-overflow: clip;
+                max-width: 0px;
+                line-height: 1;
+                white-space: nowrap;
+                transition: 1s;
+            }
+
+            mat-icon {
+                margin-top: 0.6px;
+                font-size: 20px;
+            }
+
+            &:hover {
+                width: auto;
+                gap: 5px;
+
+                span {
+                    max-width: 100%;
+                    transition: 1s;
+                }
+            }
+        }
+    }
+
+    &-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+
+        svg {
+            filter: drop-shadow(0px 0px 16px #6f6f6f);
         }
     }
 }
