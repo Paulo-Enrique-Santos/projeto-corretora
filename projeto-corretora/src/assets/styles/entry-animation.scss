@@ -1,16 +1,31 @@
-.entry-bottom-to-top {
-    opacity: 0;
-    animation: entry-bottom-to-top 2s forwards ease-out;
-}
-
 @keyframes entry-bottom-to-top {
     0% { 
-        transform: translateY(50%);
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes entry-opacity {
+    0% { 
         opacity: 0;
     }
 
     100% {
-        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes entry-left-to-right {
+    0% { 
+        transform: translateX(-50px);
+    }
+
+    100% {
+        transform: translateX(0px);
         opacity: 1;
     }
 }

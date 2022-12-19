@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'projeto-corretora';
+
+  public scrollReveal(event: any): void {
+    console.log(event);
+  }
 }
