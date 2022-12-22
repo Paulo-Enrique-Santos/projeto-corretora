@@ -10,7 +10,7 @@
 
 .section {
     max-width: 100vw;
-    min-height: calc(100vh - 70px);
+    min-height: var(--section-height-size);
     display: flex;
     flex-flow: column;
 }
@@ -37,4 +37,9 @@
     color: var(--color-contrast-scale-4);
     font-size: var(--font-size-extra-small);
     font-weight: var(--font-weight-light);
+}
+
+.title, .subtitle, .paragraph, .legend {
+    user-select: none;
+    background-color: transparent;
 }

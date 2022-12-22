@@ -1,9 +1,9 @@
 // VARIÁVEIS
 
 :root {
-    --color-background-scale-1: #191919;
-    --color-background-scale-2: #252525;
-    --color-background-scale-3: #333333;
+    --color-background-scale-1: #010409;
+    --color-background-scale-2: #0d1117;
+    --color-background-scale-3: #161b22;
     --color-background-scale-4: #4d4d4d;
 
     --color-destak-scale-1: #00A9E0;
@@ -17,6 +17,18 @@
     --color-contrast-scale-4: #a6a6a6;
     --color-contrast-scale-5: #666666;
 
+    --color-legend-scale-1: #F2B705;
+    --color-legend-scale-2: #D97904;
+
+    --color-epic-scale-1: #bc5dbc;
+    --color-epic-scale-2: #791978;
+
+    --color-rare-scale-1: #00A9E0;
+    --color-rare-scale-2: #006384;
+
+    --color-comum-scale-1: #00FF00;
+    --color-comum-scale-2: #228B22;
+
     --color-positive-scale-1: #00A82F; 
 
     --color-negative-scale-1: #DD0000;
@@ -29,6 +41,8 @@
     --font-size-medium: 24px;
     --font-size-small: 16px;
     --font-size-extra-small: 14px;
+
+    --section-height-size: calc(100vh - 70px);
 }
 
 @media (max-width: 768px) {

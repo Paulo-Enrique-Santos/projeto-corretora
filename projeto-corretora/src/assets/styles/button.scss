@@ -6,6 +6,22 @@ button {
     cursor: pointer;
     transition: .2s;
     border: none;
+    display: flex;
+    align-items: center;
+
+    mat-icon {
+        font-size: calc(var(--font-size-small) * 1.3) !important;
+        height: 20px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-left: 3px !important;
+    }
+
+    span {
+        font-size: var(--font-size-small);
+        height: 20px;
+    }
 }
 
 .button-primary {
@@ -32,4 +48,33 @@ button {
     background-color: transparent;
     color: var(--color-destak-scale-1);
     border: 2px solid var(--color-destak-scale-1);
+}
+
+.button-transparent {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0;
+    margin-top: 20px;
+    background-color: transparent;
+
+    span {
+        overflow: hidden;
+        text-overflow: clip;
+        max-width: 0px;
+        line-height: 1;
+        white-space: nowrap;
+        transition: 1s;
+        color: var(--color-destak-scale-1);
+        font-weight: var(--font-weight-bold);
+        display: flex;
+        align-items: baseline;
+    }
+
+    mat-icon {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        color: var(--color-destak-scale-1);
+    }
 }

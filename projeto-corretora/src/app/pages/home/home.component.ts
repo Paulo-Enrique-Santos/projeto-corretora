@@ -1,6 +1,13 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { NFT } from '@shared/models';
-import { Coins, CoinsList } from '@shared/models/coins.model';
+
+import { 
+  NFT, 
+  Rarity, 
+  RarityLabel, 
+  Coins, 
+  CoinsList 
+} from '@shared/models';
+
 
 @Component({
   selector: 'app-home',
@@ -8,24 +15,26 @@ import { Coins, CoinsList } from '@shared/models/coins.model';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
+  public readonly Rarity: typeof Rarity = Rarity;
+  public readonly RarityLabel: typeof RarityLabel = RarityLabel;
 
   public collectionsNft: Array<NFT> =
     [
       {
         collectionName: 'Diamond',
-        rarity: 'EXTRA RARA'
+        rarity: Rarity.LEGEND
       },
       {
         collectionName: 'Pand',
-        rarity: 'ÉPICA'
+        rarity: Rarity.EPIC
       },
       {
         collectionName: 'Beer',
-        rarity: 'RARA'
+        rarity: Rarity.RARE
       },
       {
         collectionName: 'Willy',
-        rarity: 'COMUM'
+        rarity: Rarity.COMUM
       }
     ];
 
@@ -88,6 +97,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
     
   }
 
+  public getNameRarity(rarity: Rarity): string {
+    return RarityLabel[Rarity[rarity] as keyof typeof RarityLabel];
+  }
+
+  public getDetailsNft(rarity: Rarity): void {
+    console.log(rarity);
+  }
   
   public scrollReveal(event: any): void {
     const sectionsList: Array<HTMLElement> = 
