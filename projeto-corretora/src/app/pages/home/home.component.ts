@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   public readonly Rarity: typeof Rarity = Rarity;
   public readonly RarityLabel: typeof RarityLabel = RarityLabel;
 
-  public collectionsNft: Array<NFT> =
+  public listNFT: Array<NFT> =
     [
       {
         collectionName: 'Diamond',

@@ -1,0 +1,14 @@
+<div class="nft-background" 
+    [ngClass]="Rarity[nft.rarity]" 
+    (click)="getDetails()"
+    #card>
+    <h1 class="subtitle">{{ nft.collectionName }}</h1>
+    <h4 class="legend">{{ getNameRarity(nft.rarity) }}</h4>
+    <div class="nft-image">
+        <img src="../../../assets/images/svg/LogoSVG.svg" alt="">
+    </div>
+    <button class="button-transparent">
+        <span>SAIBA MAIS</span>
+        <mat-icon>arrow_forward</mat-icon>
+    </button>
+</div>

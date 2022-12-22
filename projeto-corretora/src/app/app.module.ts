@@ -15,7 +15,7 @@ import { ComponentsModule } from '@shared/components/components.module';
     BrowserModule,
     AppRoutingModule,
     ComponentsModule,
-    PagesModule,
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

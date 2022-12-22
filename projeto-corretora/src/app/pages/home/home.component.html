@@ -1412,24 +1412,16 @@
 
 <section class="section nft">
     <div class="container">
-        <h1 class="title">Conheça nossas coleções de <span class="title">NFT's</span></h1>
-        <div class="nft-box active">
-            <ng-container *ngFor="let nft of collectionsNft">
-                <div class="nft-card" [ngClass]="Rarity[nft.rarity]" (click)="getDetailsNft(nft.rarity)">
-                    <h1 class="subtitle">{{ nft.collectionName }}</h1>
-                    <h4 class="legend">{{ getNameRarity(nft.rarity) }}</h4>
-                    <div class="nft-image">
-                        <img src="../../../assets/images/svg/LogoSVG.svg" alt="">
-                    </div>
-                    <button class="button-transparent">
-                        <span>SAIBA MAIS</span>
-                        <mat-icon>arrow_forward</mat-icon>
-                    </button>
-                </div>
-            </ng-container>
+        <div class="nft-box">
+            <h1 class="title">Conheça nossas coleções de <span class="title">NFT's</span></h1>
+            <div class="nft-box-card">
+                <ng-container *ngFor="let nft of listNFT">
+                    <app-nft-collection-card [nft]="nft"></app-nft-collection-card>
+                </ng-container>
+            </div>
         </div>
     </div>
-    <app-nft-collection-description style="position: absolute;">
+    <app-nft-collection-description style="display: none;">
 
     </app-nft-collection-description>
 </section>
