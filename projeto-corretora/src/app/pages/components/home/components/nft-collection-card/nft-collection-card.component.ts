@@ -1,7 +1,15 @@
-import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
+import { 
+  Component, 
+  OnInit, 
+  Input, 
+  ViewChild, 
+  ElementRef,
+} from '@angular/core';
 
 import { Store } from "@ngrx/store";
+import { Observable } from 'rxjs';
 
+import { toggleShowDetails } from '@pages/services';
 import { NFT, Rarity, RarityLabel } from '@shared/models';
 
 @Component({
@@ -14,24 +22,24 @@ export class NftCollectionCardComponent implements OnInit {
   public readonly RarityLabel: typeof RarityLabel = RarityLabel;
 
   @Input() public nft!: NFT;
-  @Output() public details: EventEmitter<boolean> = new EventEmitter<boolean>();
   @ViewChild('card') public card?: ElementRef;
 
 
-  constructor(private store: Store<{ app: boolean}>) { }
+  constructor(
+    private store: Store<{ appOpenDetails: boolean}>
+  ) { }
 
-  public teste$ = this.store.select('app');
+  public isOpenDetails$: Observable<boolean> = this.store.select('appOpenDetails');
 
   ngOnInit(): void {
-    console.log(this.teste$);
   }
 
   public getNameRarity(rarity: Rarity): string {
     return RarityLabel[Rarity[rarity] as keyof typeof RarityLabel];
   }
 
-  public getDetails(): void {
+  public showDetails(): void {
+    this.store.dispatch(toggleShowDetails());
     this.card?.nativeElement.classList.add('detail');
-    this.details.emit(true);
   }
 }

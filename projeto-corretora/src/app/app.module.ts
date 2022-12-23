@@ -4,8 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PagesModule } from '@pages';
 import { ComponentsModule } from '@shared/components/components.module';
+import { CollectionDetailsModule, HomeModule } from '@pages';
+
+const featureModules = [
+  HomeModule,
+  CollectionDetailsModule
+]
 
 @NgModule({
   declarations: [
@@ -15,7 +20,7 @@ import { ComponentsModule } from '@shared/components/components.module';
     BrowserModule,
     AppRoutingModule,
     ComponentsModule,
-    PagesModule
+    ...featureModules
   ],
   providers: [],
   bootstrap: [AppComponent]

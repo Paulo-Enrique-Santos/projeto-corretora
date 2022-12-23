@@ -130,15 +130,22 @@
     }
 }
 
+.hidden {
+    opacity: 0;
+    transition: .5s;
+}
+
 .detail {
+    opacity: 1;
+    transition: .5s !important;
+
     &.nft {
         &-background {
             background-color: transparent;
             color: transparent;
 
             &::after {
-                animation: animation-detail-after 1s linear;
-                content: '';
+                animation: animation-detail-after 1s linear forwards;
                 position: absolute;
             }
         }

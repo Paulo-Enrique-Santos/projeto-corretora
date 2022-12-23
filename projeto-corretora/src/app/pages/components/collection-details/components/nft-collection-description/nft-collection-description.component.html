@@ -1,5 +1,6 @@
 
-    <div class="nft-background">
+    <div class="nft-background"
+    [ngClass]="{ 'show' : isOpenDetails$ | async }">
         <div class="nft-card">
             <div class="nft-image">
                 <img src="../../../assets/images/svg/LogoSVG.svg" alt="">
@@ -18,7 +19,7 @@
                 </button>
             </div>
         </div>
-        <mat-icon class="icon close">close</mat-icon>
+        <mat-icon class="icon close" (click)="closeDetails()">close</mat-icon>
         <mat-icon class="icon control-button left">keyboard_arrow_left</mat-icon>
         <mat-icon class="icon control-button">keyboard_arrow_right</mat-icon>
     </div>

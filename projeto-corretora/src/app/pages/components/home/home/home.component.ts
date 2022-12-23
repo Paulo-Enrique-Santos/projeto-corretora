@@ -1,5 +1,8 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+
 import { 
   NFT, 
   Rarity, 
@@ -87,14 +90,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
     },
   ]
 
-  constructor() { }
+  constructor(
+    private store: Store<{ appOpenDetails: boolean }>
+  ) { }
+
+  public isOpenDetails$: Observable<boolean> = this.store.select('appOpenDetails');
 
   ngAfterViewInit(): void {
     this.setRandomPositionCoinsIcon();
   }
 
   ngOnInit(): void {
-    
   }
 
   public getNameRarity(rarity: Rarity): string {

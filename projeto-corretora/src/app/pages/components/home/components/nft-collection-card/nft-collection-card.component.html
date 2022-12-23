@@ -1,6 +1,6 @@
-<div class="nft-background" 
-    [ngClass]="Rarity[nft.rarity]" 
-    (click)="getDetails()"
+<div class="nft-background {{ Rarity[nft.rarity] }}" 
+    [ngClass]="{'hidden' : isOpenDetails$ | async}" 
+    (click)="showDetails()"
     #card>
     <h1 class="subtitle">{{ nft.collectionName }}</h1>
     <h4 class="legend">{{ getNameRarity(nft.rarity) }}</h4>

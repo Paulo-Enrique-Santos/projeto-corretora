@@ -1412,7 +1412,7 @@
 
 <section class="section nft">
     <div class="container">
-        <div class="nft-box">
+        <div class="nft-box" [ngClass]="{ 'active-center' : isOpenDetails$ | async }">
             <h1 class="title">Conheça nossas coleções de <span class="title">NFT's</span></h1>
             <div class="nft-box-card">
                 <ng-container *ngFor="let nft of listNFT">
@@ -1421,12 +1421,12 @@
             </div>
         </div>
     </div>
-    <app-nft-collection-description style="display: none;">
+    <app-nft-collection-description style="position: absolute;">
 
     </app-nft-collection-description>
 </section>
 
-<section class="section active">
+<!-- <section class="section active">
     <div class="coins">
         <ng-container *ngFor="let coin of coinsList">
             <ng-container *ngFor="let icon of coin.coins">
@@ -1439,14 +1439,9 @@
             <h1 class="title">
                 Diversas <span>CriptoMoedas</span>
             </h1>
-            <!-- <h2 class="subtitle">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel facere corrupti, et iste, architecto quam
-                ipsa eaque delectus nisi cupiditate itaque sequi! Animi quaerat porro, corrupti repudiandae quae
-                assumenda architecto qui, saepe ratione labore iste mollitia, ducimus nobis veniam sint.
-            </h2> -->
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="section section-cards">
     <div class="container">

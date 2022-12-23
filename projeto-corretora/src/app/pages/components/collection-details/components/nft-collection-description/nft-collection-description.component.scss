@@ -1,6 +1,8 @@
 .nft {
     &-background {
         height: var(--section-height-size);
+        opacity: 0;
+        display: none;
     }
     
     &-card {
@@ -87,5 +89,20 @@
 
     &.left {
         left: 0;
+    }
+}
+
+.show { 
+    animation: show-details 1s forwards linear !important;
+    display: block;
+}
+
+@keyframes show-details {
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

@@ -2,12 +2,9 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent, NftCollectionCardComponent, NftCollectionDescriptionComponent } from '@pages/home';
-import { CollectionDetailsComponent } from '@pages/collection-details';
+import { HomeComponent } from '@pages';
 
 const routes: Routes = [
-  { path: 'teste', component: NftCollectionCardComponent},
-  { path: 'detalhes-colecao-nft', component: CollectionDetailsComponent },
   { path: '', component: HomeComponent },
 ];
 
